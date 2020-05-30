@@ -1,0 +1,20 @@
+{
+  "name": "ESParklines",
+  "description": "Sparklines for ESP8266/ES32 Arduino",
+  "keywords": "sparklines, tufte, graph, lcd, tft, oled, display",
+  "authors": {
+    "name": "Karl Pitrich",
+    "url": "https://github.com/0xPIT"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xPIT/esparklines.git"
+  },
+  "dependencies": { 
+    "FixedPoints": "https://github.com/Pharap/FixedPointsArduino.git" 
+  },
+  "license": "MIT",
+  "version": "0.0.1",
+  "frameworks": "arduino",
+  "platforms": "espressif8266, espressif32"
+}
