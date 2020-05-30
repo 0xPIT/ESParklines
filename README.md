@@ -34,6 +34,7 @@ if (periodicSecond) {
 }
 ```
 
+### License
 ```
 MIT License
 
