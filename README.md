@@ -1,15 +1,16 @@
 # ESParklines
-Nice Sparklines for ESP8266, ESP32, Arduino
+Nice [Sparklines](https://en.wikipedia.org/wiki/Sparkline) for ESP8266, ESP32, Arduino
 
 - Renders sparklines using passed function to draw a line.
 - Holds a buffer of any numeric data type of speficied size.
+
+Read more about Sparklines [here](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR). 
 
 ### Demo Video
 [![ESParklines Demo Video](http://img.youtube.com/vi/Pvfijfrt5HI/0.jpg)](http://www.youtube.com/watch?v=Pvfijfrt5HI "ESParklines Demo Video")
 [Click picture to watch 35 seconds video on YouTube]
 
 ### Example Usage
-
 ```cpp
 // Create Sparkline with 25 items of uint16_t and pass in u8g2's drawLine
 SparkLine<uint16_t> MySparkLine(25, [&](const uint16_t x0, const uint16_t y0, const uint16_t x1, const uint16_t y1) { 
@@ -22,7 +23,6 @@ MySparkLine.add(42);
 // display sparkline at 0x10, 50 pixel wide, 20 pixel high
 MySparkLine.draw(0, 10, 50, 20);
 ```
-
 
 ```
 MIT License
