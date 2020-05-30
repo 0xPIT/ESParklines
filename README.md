@@ -7,8 +7,9 @@ Nice [Sparklines](https://en.wikipedia.org/wiki/Sparkline) for ESP8266, ESP32, A
 Read more about Sparklines [here](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR). 
 
 ### Demo Video
+Click picture to watch 35 seconds video on YouTube
+
 [![ESParklines Demo Video](http://img.youtube.com/vi/Pvfijfrt5HI/0.jpg)](http://www.youtube.com/watch?v=Pvfijfrt5HI "ESParklines Demo Video")
-[Click picture to watch 35 seconds video on YouTube]
 
 ### Example Usage
 ```cpp
