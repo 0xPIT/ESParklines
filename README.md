@@ -1,8 +1,8 @@
 # ESParklines
 Nice [Sparklines](https://en.wikipedia.org/wiki/Sparkline) for ESP8266, ESP32, Arduino
 
-- Renders sparklines using passed function to draw a line.
-- Holds a buffer of any numeric data type of speficied size.
+- Renders sparklines using passed function to draw a line
+- Holds a buffer of any numeric data type of speficied size
 
 Read more about Sparklines [here](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR). 
 
@@ -33,6 +33,11 @@ if (periodicSecond) {
   MySparkLine.draw(0, 10, 50, 20);
 }
 ```
+
+### Dependency Information
+This library depends on [FixedPointsArduino](https://github.com/Pharap/FixedPointsArduino). It will be automatically installed via PlatformIO.
+
+To remove this dependency, redefine `num_t` to `float` or `double` and remove all occurences of `.getInteger()` in `SparkLine.h`.
 
 ### License
 ```
