@@ -1,7 +1,9 @@
 # ESParklines
 Nice sparklines for ESP8266, ESP32, Arduino
 
-[Sparklines](https://en.wikipedia.org/wiki/Sparkline) are small, high resolution graphics embedded in a context of words, numbers or images". Edward Tufte describes sparklines as "data-intense, design-simple, word-sized graphics".
+> [Sparklines](https://en.wikipedia.org/wiki/Sparkline) are small, high resolution
+> graphics embedded in a context of words, numbers or images". Edward Tufte
+> describes sparklines as "data-intense, design-simple, word-sized graphics".
 
 This library
 - holds a buffer of any numeric data type of speficied size
