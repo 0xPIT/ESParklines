@@ -51,13 +51,13 @@ void loop() {
                        - 2 * border;
 
     uint xpos = 0;
-    display.drawStr(xpos, 42, "1");
+    display.drawStr(xpos, 38, "1");
     xpos += display.getMaxCharWidth() + 1;
     MySparkLine1.draw(xpos, 40, halfWidth, 12);
 
     xpos += display.getDisplayWidth() / 2;
 
-    display.drawStr(xpos, 42, "2");
+    display.drawStr(xpos, 38, "2");
     xpos += display.getMaxCharWidth() + 1;
 
     MySparkLine3.add(random(0, 100));
