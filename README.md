@@ -12,17 +12,26 @@ Click picture to watch 35 seconds video on YouTube
 [![ESParklines Demo Video](http://img.youtube.com/vi/Pvfijfrt5HI/0.jpg)](http://www.youtube.com/watch?v=Pvfijfrt5HI "ESParklines Demo Video")
 
 ### Example Usage
+Create Sparkline with `25` items of `uint16_t` and pass in u8g2's `drawLine`:
 ```cpp
-// Create Sparkline with 25 items of uint16_t and pass in u8g2's drawLine
 SparkLine<uint16_t> MySparkLine(25, [&](const uint16_t x0, const uint16_t y0, const uint16_t x1, const uint16_t y1) { 
   u8g2.drawLine(x0, y0, x1, y1);
 });
+```
 
-// add data any time
+Add data any time, e.g. upon sensor read, or `analogRead()`
+```cpp
 MySparkLine.add(42);
+```
 
-// display sparkline at 0x10, 50 pixel wide, 20 pixel high
-MySparkLine.draw(0, 10, 50, 20);
+Periodically display sparkline at 0x10, 50 pixel wide, 20 pixel high
+
+```cpp
+static esp8266::polledTimeout::periodicMs periodicSecond(1000);
+
+if (periodicSecond) {
+  MySparkLine.draw(0, 10, 50, 20);
+}
 ```
 
 ```
