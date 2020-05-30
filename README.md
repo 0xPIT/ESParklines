@@ -5,11 +5,12 @@ Nice sparklines for ESP8266, ESP32, Arduino
 > graphics embedded in a context of words, numbers or images". Edward Tufte
 > describes sparklines as "data-intense, design-simple, word-sized graphics".
 
-This library
-- holds a buffer of any numeric data type of speficied size
-- renders sparklines using passed-in function to draw a line
-
 Read more about Sparklines [here](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR). 
+
+### Description 
+This library is very simple, it
+- holds a buffer of any numeric data type of speficied size
+- renders sparklines using a passed-in function to draw lines
 
 ### Demo Video
 Click picture to watch 35 seconds video on YouTube
