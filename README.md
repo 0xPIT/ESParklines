@@ -18,20 +18,19 @@ Click picture to watch video (35sec) on YouTube|Exampe App: Geiger Counter
 [![DemoVideo]](http://www.youtube.com/watch?v=Pvfijfrt5HI) | ![AppExample]
 
 ### Example Usage
-Create Sparkline with `25` items of `uint16_t` and pass in u8g2's `drawLine`:
+Create Sparkline with a buffer for `25` items of `uint16_t` and pass in u8g2's `drawLine`:
 ```cpp
 SparkLine<uint16_t> MySparkLine(25, [&](const uint16_t x0, const uint16_t y0, const uint16_t x1, const uint16_t y1) { 
   u8g2.drawLine(x0, y0, x1, y1);
 });
 ```
 
-Add data any time, e.g. upon sensor read, or `analogRead()`
+Add data regularly, e.g. upon sensor read, or `analogRead()`. The data contents will be automatically rotated (FIFO), once the buffer exceeds the specified number of items.
 ```cpp
 MySparkLine.add(42);
 ```
 
-Periodically display sparkline at 0x10, 50 pixel wide, 20 pixel high
-
+Then, periodically display sparkline at 0x10, 50 pixel wide, 20 pixel high, e.g. from `loop()` like so:
 ```cpp
 static esp8266::polledTimeout::periodicMs periodicSecond(1000);
 
