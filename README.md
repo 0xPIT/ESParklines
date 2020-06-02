@@ -12,10 +12,12 @@ This library is very simple, it
 - holds a buffer of any numeric data type of speficied size
 - renders sparklines using a passed-in function to draw lines
 
-### Demo Video
-Click picture to watch 35 seconds video on YouTube
+### Demo
 
-[![ESParklines Demo Video](http://img.youtube.com/vi/Pvfijfrt5HI/0.jpg)](http://www.youtube.com/watch?v=Pvfijfrt5HI "ESParklines Demo Video")
+[![DemoVideo]](http://www.youtube.com/watch?v=Pvfijfrt5HI) | ![AppExample]
+------------ | -------------
+Click picture to watch video (35sec) on YouTube|Geiger Counter App
+------------ | -------------
 
 ### Example Usage
 Create Sparkline with `25` items of `uint16_t` and pass in u8g2's `drawLine`:
@@ -69,3 +71,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+[DemoVideo]:http://img.youtube.com/vi/Pvfijfrt5HI/0.jpg
+[AppExample]:/doc/Sparklines%20Example%20GeigerCounter.jpg
