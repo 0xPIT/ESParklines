@@ -13,7 +13,7 @@ This library is very simple, it
 - renders sparklines using a passed-in function to draw lines
 
 ### Showcase
-Click picture to watch video (35sec) on YouTube|Exampe App: Geiger Counter
+Click picture to watch video (35sec) on YouTube|Example App: Geiger Counter
 ------------ | -------------
 [![DemoVideo]](http://www.youtube.com/watch?v=Pvfijfrt5HI) | ![AppExample]
 
