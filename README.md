@@ -7,10 +7,15 @@ Nice sparklines for ESP8266, ESP32, Arduino
 
 Read more about Sparklines [here](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR). 
 
+> **Help wanted** – I  appreciate PRs with 
+> - [ ] examples for other architectures 
+> - [ ] examples for different display libraries
+
 ### Description 
 This library is very simple, it
 - holds a buffer of any numeric data type of speficied size
 - renders sparklines using a passed-in function to draw lines
+- uses the line drawing function of your preferred graphics library (u8g2, Adafruit, ...)
 
 ### Showcase
 Click picture to watch video (35sec) on YouTube|Example App: Geiger Counter
@@ -18,14 +23,15 @@ Click picture to watch video (35sec) on YouTube|Example App: Geiger Counter
 [![DemoVideo]](http://www.youtube.com/watch?v=Pvfijfrt5HI) | ![AppExample]
 
 ### Example Usage
-Create Sparkline with a buffer for `25` items of `uint16_t` and pass in u8g2's `drawLine`:
+Create Sparkline with a buffer for `25` items of `uint16_t` and **pass in** your existing line drawing function. I use [u8g2]'s `drawLine()`:
 ```cpp
 SparkLine<uint16_t> MySparkLine(25, [&](const uint16_t x0, const uint16_t y0, const uint16_t x1, const uint16_t y1) { 
   u8g2.drawLine(x0, y0, x1, y1);
 });
 ```
+This example uses a *lambda expression* (aka. 'closure' or anonymous / unnamed function: `[] ( <parameters> ) { <code> }`) to match the [function signature](https://github.com/0xPIT/ESParklines/blob/master/src/SparkLine.h#L37) of [u8g2]'s `drawLine()`. For the [AdafruitGFX] library, change to `tft.drawLine(x0, y0, x1, y1, myColor);`, if `myColor` holds your line color in the current function scope. The ampersand `[&]` captures scope, so your outside variables are available inside `{ }`.
 
-Add data regularly, e.g. upon sensor read, or `analogRead()`. The data contents will be automatically rotated (FIFO), once the buffer exceeds the specified number of items.
+Next, add data regularly, e.g. every minute upon sensor read, or `analogRead()`, etc. The data will be automatically scaled and automatically rotated (FIFO), once the buffer exceeds the specified number of items.
 ```cpp
 MySparkLine.add(42);
 ```
@@ -71,3 +77,5 @@ SOFTWARE.
 
 [DemoVideo]:http://img.youtube.com/vi/Pvfijfrt5HI/0.jpg
 [AppExample]:/doc/Sparklines%20Example%20GeigerCounter.jpg
+[u8g2]:https://github.com/olikraus/u8g2
+[AdafruitGFX]:https://github.com/adafruit/Adafruit-GFX-Library
