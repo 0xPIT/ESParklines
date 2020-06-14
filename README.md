@@ -1,5 +1,6 @@
 # ESParklines
-Nice sparklines for ESP8266, ESP32, Arduino
+Nice sparklines for ESP8266, ESP32 on Arduino Framework.
+*Note: Will not compile on AVR due to lack of C++11 compiler and no standard C++ library.*
 
 > [Sparklines](https://en.wikipedia.org/wiki/Sparkline) are small, high resolution
 > graphics embedded in a context of words, numbers or images". Edward Tufte
