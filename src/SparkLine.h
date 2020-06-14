@@ -109,9 +109,13 @@ public:
       return;
     }
 
+    num_t slope = 1.0f * (maxHeight - lineWidth);
+
     T lo = this->findMin();
     T hi = this->findMax();
-    num_t slope = 1.0f * (maxHeight - lineWidth) / (hi - lo);
+    if (lo != hi) {
+      slope /= hi - lo;
+    }
     
     Point lastPoint = { 0, 0 };
     num_t segment = 0.0f;
