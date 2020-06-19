@@ -43,6 +43,7 @@ class SparkLine
   size_t elements;
   drawLineFunction drawLine;
 
+public:
   T findMin() const {
     T lo = container[0];
     for (size_t i = 0; i < elements; i++) {
@@ -59,7 +60,15 @@ class SparkLine
     return hi;
   }
 
-public:
+  T findAvg() const {
+	if (elements == 0) return 0;
+    T sum = 0;
+    for (size_t i = 0; i < elements; i++) {
+      sum += container[i];
+    }
+    return sum / elements;
+  }
+
   SparkLine(size_t _size, drawLineFunction _dlf)
     : container(new T[_size]),
       capacity(_size),
