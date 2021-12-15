@@ -61,15 +61,14 @@ public:
   }
 
   T findAvg() const {
-	  if (elements < 1) {
-      return 0;
-    }
-
     T sum = 0;
-    for (size_t i = 0; i < elements; i++) {
-      sum += container[i];
+	  if (elements > 0) {    
+      for (size_t i = 0; i < elements; i++) {
+        sum += container[i];
+      }
+      sum /= elements;
     }
-    return sum / elements;
+    return sum;
   }
 
   SparkLine(size_t _size, drawLineFunction _dlf)
