@@ -61,7 +61,10 @@ public:
   }
 
   T findAvg() const {
-	if (elements == 0) return 0;
+	  if (elements < 1) {
+      return 0;
+    }
+
     T sum = 0;
     for (size_t i = 0; i < elements; i++) {
       sum += container[i];
